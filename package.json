@@ -1,0 +1,32 @@
+{
+  "name": "bun-astro-htmx-tailwind-boilerplate",
+  "type": "module",
+  "scripts": {
+    "build": "bun run --bun tsc && bun run --bun astro build",
+    "dev": "bun run --bun astro dev",
+    "format": "bun run --bun prettier --write .",
+    "postinstall": "mkdir -p public/vendor && cp node_modules/htmx.org/dist/htmx.js public/vendor",
+    "preview": "bun run --bun astro preview"
+  },
+  "prettier": {
+    "plugins": [
+      "prettier-plugin-astro",
+      "prettier-plugin-tailwindcss"
+    ],
+    "singleQuote": true,
+    "tailwindStylesheet": "./src/styles/global.css"
+  },
+  "dependencies": {
+    "@astrojs/node": "^9.5.2",
+    "astro": "^5.16.11"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "htmx.org": "^2.0.8",
+    "prettier": "^3.8.0",
+    "prettier-plugin-astro": "^0.14.1",
+    "prettier-plugin-tailwindcss": "^0.7.2",
+    "tailwindcss": "^4.1.18",
+    "typescript": "^5.9.3"
+  }
+}
